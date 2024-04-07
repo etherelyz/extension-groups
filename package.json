@@ -17,7 +17,28 @@
         "command": "extension-groups.helloWorld",
         "title": "Hello World"
       }
-    ]
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "extension-groups",
+          "title": "Extension Groups",
+          "icon": "activity_bar_icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "package-explorer": [
+        {
+          "id": "package-dependencies",
+          "name": "Dependencies"
+        },
+        {
+          "id": "package-outline",
+          "name": "Outline"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
