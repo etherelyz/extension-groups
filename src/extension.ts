@@ -10,6 +10,14 @@ export function activate(context: vscode.ExtensionContext) {
 	// This line of code will only be executed once when your extension is activated
 	console.log('Congratulations, your extension "extension-groups" is now active!');
 
+	vscode.commands.registerCommand('otherExtension.getPackageJSON', id => {
+		return vscode.extensions.getExtension(id)?.packageJSON;
+	});
+	const allExtensions: readonly vscode.Extension<any>[] = vscode.extensions.all;
+	let filteredExtensions = allExtensions.filter(entry => !entry.id.startsWith('vscode'));
+	filteredExtensions = allExtensions.filter(entry => !entry.id.startsWith('vscode'));
+	filteredExtensions.forEach(entry => console.log(entry.id));
+
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with registerCommand
 	// The commandId parameter must match the command field in package.json

@@ -28,7 +28,7 @@
       ]
     },
     "views": {
-      "package-explorer": [
+      "extension-groups": [
         {
           "id": "package-dependencies",
           "name": "Dependencies"
